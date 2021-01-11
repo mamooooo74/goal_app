@@ -1,0 +1,14 @@
+<div class="main-box">
+  <%= render 'shared/side_bar' %>
+  <div class="new-goal">
+    <div class="form-area">
+      <%= form_with model: @goal do |f| %>
+        <%= f.label '目標' %><br>
+        <%= f.text_field :title %><br>
+        <%= f.label '説明' %><br>
+        <%= f.text_area :content %><br>
+        <%= f.submit "作成" %>
+      <% end %>
+    </div>
+  </div>
+</div>

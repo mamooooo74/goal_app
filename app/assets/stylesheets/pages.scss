@@ -1,0 +1,12 @@
+.header{
+  height: 80px;
+  background-color: #fff;
+  display: flex;
+  .title{
+    margin: 0 40px;
+    line-height: 80px;
+    color: #555;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}

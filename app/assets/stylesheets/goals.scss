@@ -1,0 +1,14 @@
+.new-goal{
+  background-color: blue;
+  height: calc(100vh - 80px);
+  width: calc(100vw - 350px);
+  position: relative;
+  & .form-area{
+    background-color: #fff;
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
