@@ -17,7 +17,7 @@ class GoalsController < ApplicationController
     @goal = current_user.goals.build(goal_params)
     
     if @goal.save
-      redirect_to root_path
+      redirect_to goal_path(@goal)
     else
       render 'new'
     end

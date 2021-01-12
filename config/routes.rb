@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'pages#home'
-  resources :goals, only: [:new, :create, :show]
-
+  resources :goals, only: [:new, :create, :show] do
+    resources :tasks, only: [:create]
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

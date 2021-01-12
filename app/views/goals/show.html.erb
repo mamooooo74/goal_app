@@ -3,6 +3,13 @@
   <div>
     <div><%= @goal.title %></div>
     <div><%= @goal.content %></div>
+    <% @goal.tasks.each do |task| %>
+      <%= task.content %>
+    <% end %>
+    <%= form_with url: goal_tasks_path(@goal) do |f| %>
+      <%= f.text_field :content %>
+      <%= f.submit '送信' %>
+    <% end %>
   </div>
 
 
