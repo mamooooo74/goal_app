@@ -6,9 +6,20 @@
   & .form-area{
     background-color: #fff;
     position: absolute;
-    
+    text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    & form{
+      margin:30px;
+      & .goal_title{
+        font-size: 30px;
+        width: 300px;
+      }
+      & .goal_content{
+        font-size: 30px;
+        width: 300px;
+      }
+    }
   }
 }

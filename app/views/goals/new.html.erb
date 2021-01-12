@@ -3,10 +3,10 @@
   <div class="new-goal">
     <div class="form-area">
       <%= form_with model: @goal do |f| %>
-        <%= f.label '目標' %><br>
-        <%= f.text_field :title %><br>
+        <span><%= f.label '目標' %>(必須)</span><br>
+        <%= f.text_field :title, class: "goal_title" %><br>
         <%= f.label '説明' %><br>
-        <%= f.text_area :content %><br>
+        <%= f.text_area :content, class: "goal_content" %><br>
         <%= f.submit "作成" %>
       <% end %>
     </div>

@@ -1,7 +1,12 @@
 <div class="left-box">
-  <div class="user-box">
-    <div class="name"></div>
+  <div class="title">
+    <span>目標一覧</span>
   </div>
-
-
+  <div class="goal-list">
+    <% current_user.goals.each do |goal| %>
+      <div class="goal">
+        <span><%=  link_to goal.title, goal_path(goal) %></span>
+      </div>
+    <% end %>
+  </div>
 </div>
