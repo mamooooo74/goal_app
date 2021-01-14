@@ -1,3 +1,4 @@
+// new.html.erb
 .new-goal{
   background-color: blue;
   height: calc(100vh - 80px);
@@ -21,5 +22,28 @@
         width: 300px;
       }
     }
+  }
+}
+// show.html.erb
+.show-goal{
+  width: calc(100vw - 350px);
+  text-align: center;
+  & .title{
+    font-size: 60px;
+    margin: 20px auto;
+  }
+  & .memo{
+    text-align: left;
+    margin: 0 auto;
+    width: 60%;
+    background-color: #fff;
+    word-break : break-all;
+  }
+  & #goal_content{
+    width: 60%;
+    height: 200px;
+  }
+  .hidden{
+    display: none;
   }
 }

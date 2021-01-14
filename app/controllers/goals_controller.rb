@@ -21,7 +21,12 @@ class GoalsController < ApplicationController
     else
       render 'new'
     end
-    
+  end
+
+  def update
+    goal = Goal.find(params[:id])
+    goal.update(goal_params)
+    redirect_to goal_path(goal)
   end
 
 
@@ -35,8 +40,6 @@ class GoalsController < ApplicationController
       goal = Goal.find_by(id: params[:id])
       redirect_to root_path unless goal && current_user.id == goal.user_id
     end
-
-
 
 end
 
