@@ -1,4 +1,5 @@
 <div class="left-box">
+
   <div class="title">
     <span>目標一覧</span>
   </div>
@@ -8,5 +9,10 @@
         <span><%=  link_to goal.title, goal_path(goal) %></span>
       </div>
     <% end %>
+  <%= form_with model: Goal.new, class: "new-goal" do |f| %>
+    <%= f.label "新規目標" %><br>
+    <%= f.text_field :title %>
+    <%= f.submit "作成" %>
+  <% end%>
   </div>
 </div>

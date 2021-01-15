@@ -6,20 +6,12 @@ class GoalsController < ApplicationController
   def show
     @goal = Goal.find(params[:id])
   end
-
-
-
-  def new
-    @goal = Goal.new
-  end
-
+  
   def create
     @goal = current_user.goals.build(goal_params)
     
     if @goal.save
       redirect_to goal_path(@goal)
-    else
-      render 'new'
     end
   end
 

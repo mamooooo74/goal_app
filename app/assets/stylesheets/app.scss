@@ -24,11 +24,17 @@
   height: calc(100vh - 80px);
   background-color:  #ddd;
   overflow: scroll;
+  
   & .title{
     margin: 40px;
     text-align: center;
   }
   & .goal-list{
     margin: 0 40px;
+  }
+
+  & .new-goal{
+    position: absolute;
+    bottom: 30px;
   }
 }

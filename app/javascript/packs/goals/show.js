@@ -1,4 +1,4 @@
-const btn = document.querySelector('#memo_btn');
+const btn = document.querySelector('.memo_btn');
 const form = document.querySelector('#memo_form');
 const memo = document.querySelector('.memo');
 

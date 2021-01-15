@@ -1,31 +1,7 @@
-// new.html.erb
-.new-goal{
-  background-color: blue;
-  height: calc(100vh - 80px);
-  width: calc(100vw - 350px);
-  position: relative;
-  & .form-area{
-    background-color: #fff;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    & form{
-      margin:30px;
-      & .goal_title{
-        font-size: 30px;
-        width: 300px;
-      }
-      & .goal_content{
-        font-size: 30px;
-        width: 300px;
-      }
-    }
-  }
-}
+
 // show.html.erb
 .show-goal{
+  position: relative;
   width: calc(100vw - 350px);
   text-align: center;
   & .title{
@@ -43,7 +19,29 @@
     width: 60%;
     height: 200px;
   }
-  .hidden{
-    display: none;
+  & .content-box{
+    margin: 0 auto;
+    
+    width: 60%;
+    & .content{
+      background-color: #fff;
+      margin-top: 5px;
+    }
   }
+  
+  & .task-title{
+    font-size: 30px;
+  }
+  & .todo-box{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    & #content{
+      width: 300px;
+    }
+  }
+}
+
+.hidden{
+  display: none;
 }

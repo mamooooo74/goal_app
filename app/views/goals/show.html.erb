@@ -2,18 +2,26 @@
   <%= render 'shared/side_bar' %>
   <div class="show-goal">
     <div class="title"><%= @goal.title %></div>
-    <% @goal.tasks.each do |task| %>
-      <%= task.content %>
+    <% if @goal.content? %>
+      <button class="memo_btn">メモの編集</button>
+    <% else %>
+      <button class="memo_btn">メモの作成</button>
     <% end %>
-    <button id="memo_btn">メモの編集</button>
     <div class="memo"><%= simple_format @goal.content %></div> 
     <%= form_with model: @goal, url: goal_path(@goal), id: "memo_form", class: "hidden" do |f|%>
       <%= f.text_area :content %><br>
       <%= f.submit '変更' %> 
     <% end %>
-    <%= form_with url: goal_tasks_path(@goal) do |f| %>
+    <div class="task-title">目標達成の為に行う事</div>
+    <div class="content-box">
+      <% @goal.tasks.each do |task| %>
+        <div class="content"><%= task.content %></div>
+      <% end %>
+    </div>
+    <%= form_with url: goal_tasks_path(@goal) ,class: "todo-box" do |f| %>
+      <%= f.label "目標達成の為に行う事"%><br>
       <%= f.text_field :content %>
-      <%= f.submit '送信' %>
+      <%= f.submit '作成' %>
     <% end %>
   </div>
 </div>
