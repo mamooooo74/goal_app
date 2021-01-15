@@ -1,0 +1,22 @@
+.top-title{
+  font-size: 30px;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.new_user{
+  background-color: #fff;
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  text-align: center;
+  
+
+  & .actions{
+    margin-top: 10px;
+  }
+}
+.device-path{
+  text-align: center;
+}
