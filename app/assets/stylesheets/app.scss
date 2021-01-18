@@ -2,12 +2,17 @@
   height: 80px;
   background-color: #fff;
   display: flex;
+  justify-content: space-between;
   .title{
     margin: 0 40px;
     line-height: 80px;
     color: #555;
     font-size: 30px;
     font-weight: bold;
+  }
+  & .log-out{
+    line-height: 80px;
+    margin-right: 40px;
   }
 }
 .container{

@@ -1,3 +1,6 @@
 <header class="header">
   <div class="title">GOAL</div>
+  <% if user_signed_in? %>
+    <div class="log-out"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></div>
+  <% end %>
 </header>
