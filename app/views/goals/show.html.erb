@@ -15,7 +15,7 @@
     <div class="task-title">目標達成の為に行う事</div>
     <div class="content-box">
       <% @goal.tasks.each do |task| %>
-        <div class="content"><%= task.content %></div>
+        <div class="content"><%= task.content %><%= link_to '削除', goal_task_path(@goal, task), method: :delete %></div>
       <% end %>
     </div>
     <%= form_with url: goal_tasks_path(@goal) ,class: "todo-box" do |f| %>

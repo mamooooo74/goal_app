@@ -5,6 +5,11 @@ class TasksController < ApplicationController
     redirect_to goal_path(task.goal.id)
   end
 
+  def destroy
+    task = Task.find(params[:id]).destroy
+    redirect_to goal_path(params[:goal_id])
+  end
+
 
 
 
