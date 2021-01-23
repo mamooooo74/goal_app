@@ -6,7 +6,7 @@
   <div class="goal-list">
     <% current_user.goals.each do |goal| %>
       <div class="goal">
-        <span><%=  link_to goal.title, goal_path(goal) %></span>
+        <span class="<%= "line" if goal.comp? %>"><%=  link_to goal.title, goal_path(goal)%></span>
       </div>
     <% end %>
   <%= form_with model: Goal.new, class: "new-goal" do |f| %>

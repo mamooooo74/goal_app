@@ -2,6 +2,9 @@
   <%= render 'shared/side_bar' %>
   <div class="show-goal">
     <div class="title"><%= @goal.title %></div>
+    <% if !@goal.comp? %>
+      <div class="comp-btn"><%= link_to "完了", comp_path(@goal) %></div>
+    <% end %>
     <% if @goal.content? %>
       <button class="memo_btn">メモの編集</button>
     <% else %>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'pages#home'
+  get 'comp/:id', to: 'goals#comp', as: 'comp'
   resources :goals, only: [:create, :show, :update] do
     resources :tasks, only: [:create,:destroy]
   end

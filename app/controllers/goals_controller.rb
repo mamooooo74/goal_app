@@ -22,6 +22,13 @@ class GoalsController < ApplicationController
   end
 
 
+  def comp
+    goal = Goal.find(params[:id])
+    goal.update(comp: true)
+    redirect_to root_path
+  end
+
+
   private
 
     def goal_params
