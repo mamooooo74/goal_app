@@ -43,3 +43,10 @@
     bottom: 30px;
   }
 }
+.line{
+  
+  background-image: linear-gradient(transparent 0.5em, #111 0, #111 calc(0.5em + 1px), transparent 0, transparent calc(0.5em + 3px), #111 0, #111 calc(0.5em + 4px), transparent 0);
+    color: #888;
+    margin-left: 0.4em;
+    text-decoration: none;
+}
